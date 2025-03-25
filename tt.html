@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>187超级无敌大帅比祝你</title>
+    <style>
+        .popup{
+            position:fixed;
+            padding:10px;
+            background-color:pink;
+            border-radius:5px;
+            font-family:"楷体","KaiTi",sans-serif;
+            font-size:16px;
+            text-align:center;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+            width:300px;
+            height:40px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+    </style>
+
+</head>
+<body>
+    <script>
+        function createPopup(){
+            const x = Math.random() * (window.innerWidth - 300);
+            const y = Math.random() * (window.innerHeight - 50);
+            const popup = document.createElement('div');
+            popup.className = 'popup';
+            popup.style.left = x + 'px';
+            popup.style.top = y + 'px';
+            popup.textContent = '婷婷宝贝天天开心，万事顺意ฅ(♡ơ ₃ơ)ฅ';
+            document.body.appendChild(popup);
+            setTimeout(()=>{
+                popup.remove();
+            },5000);
+        }
+        for(let i = 0;i < 200;i++){
+            setTimeout(createPopup,i * 10);
+        }
+    </script>>
+
+</body>
+</html>
